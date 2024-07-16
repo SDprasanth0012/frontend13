@@ -1,0 +1,331 @@
+:root {
+    --color-White: hsl(0, 0%, 100%);
+    --color-Black: hsl(0, 0%, 0%);
+    --color-Dark-Gray: hsl(0, 0%, 55%);
+    --color-Very-Dark-Gray: hsl(0, 0%, 41%);
+    --font1: "Josefin Sans", sans-serif;
+    --font2: "Alata", sans-serif;
+}
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    font-family: var(--font1);
+}
+img {
+    width: 100%;
+    display: block;
+}
+.hero {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+    position: relative;
+}
+.container {
+    max-width: 1440px;
+    width: 80%;
+}
+.layer {
+    background-color: black;
+    z-index: -1;
+    width: 100%;
+}
+.layer>img{
+    opacity: 0.9;
+}
+.img2{
+    display: none;
+}
+.hero-layer{
+    position: absolute;
+    top : 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header {
+    width: 100%;
+    margin-top: 2rem;
+}
+header,nav,.creations {
+    display: flex;
+    justify-content:
+    space-between;
+    align-items: center;
+}
+header>h1 {
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: bold;
+}
+.ham {
+    display: none;
+}
+main {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+main > div{
+    width: 50%;
+    font-size: 4rem;
+    padding: 1rem;
+    border: 2px solid white;
+    text-transform:uppercase;
+    font-family: var(--font1);
+    font-weight: 200;
+    letter-spacing: 0.2rem;
+    padding: 2rem;
+}
+nav>a{
+    margin-left: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav>a:hover {
+    border-bottom: 2px solid white;
+}
+.mob-nav {
+    display: none;
+}
+.inAct-cont {
+    position: relative;
+    margin: 8rem 0;
+    padding: 0;
+}
+.inact-image{
+    width: 60%;
+}
+.inact-card{
+    position: absolute;
+    width: 50%;
+    bottom : 0;
+    right: 0;
+
+    color: var(--color-Black);
+    background-color: var(--color-White);
+    padding: 6rem 1rem 0 6rem;
+    line-height: 1.5;
+}
+.inact-card>h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: var(--font1);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+.inact-card>p {
+    font-size: 1rem;
+    color: var(--color-Dark-Gray);
+}
+.creations{
+    color: var(--color-Dark-Gray);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.creations>h2{
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 1.2;
+}
+.creations>h3{
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: bold;
+    color: var(--color-Black);
+    border: 1px solid var(--color-Black);
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+.creations>h3:hover{
+    background-color: var(--color-Black);
+    color: var(--color-White);
+    
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+.child {
+    position: relative;
+    margin: 1rem;
+}
+.child > h3 {
+    position: absolute;
+    color: var(--color-White);
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 100;
+    padding: 2rem;
+}
+.mobile-btn{
+    display: none;
+}
+.footer {
+    background-color: var(--color-Black);
+    color: var(--color-White);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.footer>.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+.icons>img {
+    width: 20px;
+    cursor: pointer;
+    padding: 0.1rem;
+}
+.icons>img:hover{
+    border-bottom: 1px solid white;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+ul ,.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.icons {
+    margin-bottom: 2rem;
+}
+li {
+    list-style: none;
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+}
+li:hover {
+    border-bottom: 2px solid white;
+}
+.icon-rights {
+    display: flex;
+    flex-direction: column;
+}
+.icon-rights>p {
+    opacity: 0.5;
+}
+@media (max-width : 1439px){
+    nav {
+        display: none;
+    }
+    .img1 {
+        display: none;
+    }
+    .img2{
+        display: block;
+    }
+    .ham{
+        display: block;
+        height: 100%;
+    }
+    .mob-nav>div>img {
+        width: 20px;
+        margin: 10px 20px auto 20px;
+        margin-left: auto;
+    }
+    .mob-nav>div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 15rem;
+    }
+    .mob-nav {
+        display: block;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        padding: 2rem;
+    }
+    .mob-nav>p {
+        display: block;
+        margin: 1.5rem ;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        
+    }
+    .container{
+        width: 90%;
+    }
+    main> div {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    .inAct-cont{
+        position: static;
+        width: 90%;
+        margin: 3rem 0 3rem 0;
+    }
+    .inact-image{
+        width: 100%;
+    }
+    .inact-card{
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+    .inact-card>h2{
+        font-size: 2rem;
+    }
+    .creations>h3{
+        display: none;
+    }
+    .creations>h2{
+        margin: 0 auto;
+        font-size: 2rem;
+    }
+    .child>h3{
+        max-width: 100px;
+        font-size: 2.0rem;
+        padding: 1rem;
+    }
+    .mobile-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-btn>h3{
+        border: 1px solid var(--color-Dark-Gray);
+        font-weight: 300;
+        font-size: 1rem;
+        color: var(--color-Black);
+        letter-spacing: 1.1;
+        padding: 0.5rem 2rem;
+    }
+    .mobile-btn>h3:hover{
+        background-color: var(--color-Black);
+        color: var(--color-White);
+    }
+    ul {
+        flex-direction: column;
+    }
+    .footer>.container {
+        flex-direction: column;
+    }
+    .icons {
+        margin-top: 2rem;
+    }
+}
